@@ -1,0 +1,257 @@
+@font-face {
+  font-family: game ;
+  src: url('../fonts/GameCube.ttf');
+}
+:root {
+  --iron:  #493C3A;
+  --bronze: #5C3D37;
+  --silver: #8E9FA7;
+  --gold: #714B1D;
+  --platinum: #358474;
+  --diamond: #4769C0;
+  --master: #D672F4;
+  --grandmaster: #2B262F;
+  --challenger: #B5904C;
+  --light-shadow: #77571d;
+--dark-shadow: #3e2904;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: game;
+
+}
+
+.background{
+  max-width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url('/imgs/656584.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.panel {
+  min-width: 85%;
+  min-height: 85%;
+  border-radius: 10px;
+  border: 5px solid var(--master);
+  background-color: #162137b2;
+  display: flex;
+  justify-content:flex-start;
+  align-items:center;
+  flex-direction: column;
+}
+
+.panel h1{
+  letter-spacing: -1px;
+  font-size: 3rem;
+  color: #fff;
+  padding: 10px 0px;
+}
+
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid rgb(112, 109, 109);
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: rgb(112, 109, 109);
+}
+
+.form__field:focus .form_label {
+
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: wheat;
+    font-weight: 700;
+}
+
+.form__field:focus{
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #4399D4, #fff);
+  border-image-slice: 1;
+}
+
+
+.form__field:required .form__field:invalid{
+  box-shadow: none;
+}
+
+.img-jinx {
+  width: 22%;
+
+}
+
+.img {
+  height: 100%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.img img {
+width:25%;
+
+}
+
+.stats {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 30px;
+width: 100%;
+height: 100%;
+}
+
+.stats div {
+width: 30%;
+height: 100%;
+padding: 40px 20px;
+border-radius: 10px;
+background-color: #211d24a9;
+border: 4px solid black;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.pdl {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.pdl h4 {
+font-size: 2rem;
+color: rgb(255, 255, 86);
+text-shadow: -3px -2px 2px rgba(0, 0, 0, 0.73);
+}
+
+.pdl span {
+font-size: 2rem;
+color: rgb(255, 255, 86);
+text-shadow: -3px -2px 2px rgba(0, 0, 0, 0.73);
+}
+
+.wins {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.wins h4 {
+font-size: 2rem;
+color: rgb(86, 231, 49);
+text-shadow: -3px -2px 2px rgba(0, 0, 0, 0.73);
+}
+
+.wins span {
+font-size: 2rem;
+color: rgb(86, 231, 49);
+text-shadow: -3px -2px 2px rgba(0, 0, 0, 0.73);
+}
+
+.loses {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.loses h4 {
+font-size: 2rem;
+color: rgb(199, 18, 18);
+text-shadow: -3px -2px 2px rgba(0, 0, 0, 0.73);
+}
+
+.loses span {
+font-size: 2rem;
+color: rgb(199, 18, 18);
+text-shadow: -3px -2px 2px rgba(0, 0, 0, 0.73);
+}
+
+
+.wrapper {
+
+display: grid;
+grid-template-areas: 'overlap';
+place-content: center;
+text-transform: uppercase;
+height: 200px;
+
+}
+.wrapper > div {
+background-clip: text;
+-webkit-background-clip: text;
+color: #363833;
+font-family: 'Poppins', sans-serif;
+font-weight: 900;
+font-size: 6rem;
+grid-area: overlap;
+letter-spacing: 1px;
+-webkit-text-stroke: 4px transparent;
+}
+div.bg {
+background-image: repeating-linear-gradient( 105deg,
+  var(--master) 0% ,
+  var(--dark-shadow) 5%,
+  var(--master) 12%);
+color: transparent;
+filter: drop-shadow(5px 15px 15px black);
+transform: scaleY(1.05);
+transform-origin: top;
+}
+div.fg{
+background-image: repeating-linear-gradient( 5deg,
+  var(--master) 0% ,
+  var(--light-shadow) 23%,
+  var(--master) 31%);
+color: #1e2127;
+transform: scale(1);
+}

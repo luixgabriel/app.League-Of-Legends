@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <% playerData.forEach(player => { %>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/<%=player.tier%>.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+      <h1></h1>
+
+
+        <div class="background">
+
+            <div class="panel">
+
+                <div class="img">
+                    <img src="./imgs/<%=player.tier%>.png" alt="" srcset="">
+                </div>
+
+                <div class="stats">
+                    <div class="pdl">
+                        <h4>PDL</h4>
+                        <span><%=player.leaguePoints%></span>
+                    </div>
+
+                    <div class="wins">
+                        <h4>VITORIAS</h4>
+                        <span><%=player.wins%></span>
+                    </div>
+
+                    <div class="loses">
+                        <h4>DERROTAS</h4>
+                        <span><%=player.losses%></span>
+                    </div>
+                </div>
+                <div class="wrapper">
+
+                  <% if(player.tier == 'IRON') { %>
+                    <div class="bg"> FERRO </div>
+                    <div class="fg"> FERRO </div>
+                  <% } %>
+
+                  <% if(player.tier == 'SILVER') { %>
+                    <div class="bg"> PRATA </div>
+                    <div class="fg"> PRATA </div>
+                  <% } %>
+
+                  <% if(player.tier == 'GOLD') { %>
+                    <div class="bg"> OURO </div>
+                    <div class="fg"> OURO </div>
+                  <% } %>
+
+                  <% if(player.tier == 'PLATINUM') { %>
+                    <div class="bg"> PLATINA </div>
+                    <div class="fg"> PLATINA </div>
+                  <% } %>
+
+                  <% if(player.tier == 'DIAMOND') { %>
+                    <div class="bg"> DIAMANTE </div>
+                    <div class="fg"> DIAMANTE </div>
+                  <% } %>
+
+                  <% if(player.tier == 'MASTER') { %>
+                    <div class="bg"> MASTER </div>
+                    <div class="fg"> MASTER </div>
+                  <% } %>
+
+                  <% if(player.tier == 'GRANDMASTER') { %>
+                    <div class="bg"> GRAO-MESTRE </div>
+                    <div class="fg"> GRAO-MESTRE </div>
+                  <% } %>
+
+                  </div>
+            </div>
+        </div>
+
+</body>
+<% }) %>
+</html>
