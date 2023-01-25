@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "app-riot",
-  "buildCommand": "next build",
+
   "builds": [
      { "src": "app.js", "use": "@vercel/node" }
   ],
