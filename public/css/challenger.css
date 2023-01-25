@@ -6,7 +6,7 @@
   --iron:  #493C3A;
   --bronze: #5C3D37;
   --silver: #8E9FA7;
-  --gold: #E5B27A;
+  --gold: #714B1D;
   --platinum: #358474;
   --diamond: #4769C0;
   --master: #D672F4;
@@ -34,13 +34,14 @@
   justify-content: center;
   align-items: center;
 
+
 }
 
 .panel {
   min-width: 85%;
   min-height: 85%;
   border-radius: 10px;
-  border: 5px solid var(--gold);
+  border: 5px solid var(--challenger);
   background-color: #162137b2;
   display: flex;
   justify-content:flex-start;
@@ -238,9 +239,9 @@ letter-spacing: 1px;
 }
 div.bg {
 background-image: repeating-linear-gradient( 105deg,
-  var(--gold) 0% ,
+var(--challenger) 0% ,
   var(--dark-shadow) 5%,
-  var(--gold) 12%);
+  var(--challenger) 12%);
 color: transparent;
 filter: drop-shadow(5px 15px 15px black);
 transform: scaleY(1.05);
@@ -248,9 +249,9 @@ transform-origin: top;
 }
 div.fg{
 background-image: repeating-linear-gradient( 5deg,
-  var(--gold) 0% ,
+  var(--challenger) 0% ,
   var(--light-shadow) 23%,
-  var(--gold) 31%);
+  var(--challenger) 31%);
 color: #1e2127;
 transform: scale(1);
 }
@@ -302,6 +303,8 @@ transform: scale(1);
     }
 
     .wrapper > div {
-      font-size: 3rem;
+      font-size: 2.5rem;
       }
+
+
 }

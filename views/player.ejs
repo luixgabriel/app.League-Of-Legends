@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
   <% playerData.forEach(player => { %>
 <head>
     <meta charset="UTF-8">
@@ -43,6 +44,11 @@
                     <div class="fg"> FERRO </div>
                   <% } %>
 
+                  <% if(player.tier == 'BRONZE') { %>
+                    <div class="bg"> BRONZE </div>
+                    <div class="fg"> BRONZE </div>
+                  <% } %>
+
                   <% if(player.tier == 'SILVER') { %>
                     <div class="bg"> PRATA </div>
                     <div class="fg"> PRATA </div>
@@ -71,6 +77,11 @@
                   <% if(player.tier == 'GRANDMASTER') { %>
                     <div class="bg"> GRAO-MESTRE </div>
                     <div class="fg"> GRAO-MESTRE </div>
+                  <% } %>
+
+                  <% if(player.tier == 'CHALLENGER') { %>
+                    <div class="bg"> DESAFIANTE </div>
+                    <div class="fg"> DESAFIANTE </div>
                   <% } %>
 
                   </div>

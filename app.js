@@ -16,6 +16,8 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(router);
 
-app.listen(8087, () => {
+const port = process.env.PORT;
+
+app.listen(port || 4000, () => {
   console.log('Servidor rodando');
 });
