@@ -19,6 +19,10 @@ class HomeController {
       });
 
       const data = await (response.json());
+
+      if (data.status) {
+        return res.render('404');
+      }
       const idLol = data.id;
 
       const player = await fetch(`https://br1.api.riotgames.com/tft/league/v1/entries/by-summoner/${idLol}`, {
@@ -26,6 +30,10 @@ class HomeController {
       });
 
       const playerData = await (player.json());
+
+      if (playerData.length <= 0) {
+        return res.render('404');
+      }
       return res.render('player', { playerData });
     } catch (error) {
       console.log(error);

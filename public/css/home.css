@@ -126,6 +126,19 @@
 
 }
 
+.button button {
+  background-color: transparent;
+  font-size: 0.9rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  margin: 10px 0px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+ }
+
 .img {
   height: 100%;
   max-width: 900px;
@@ -141,22 +154,22 @@ width:25%;
 }
 
 .stats {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 30px;
-width: 100%;
-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
 }
 
 .stats div {
-width: 30%;
-height: 100%;
-padding: 40px 20px;
-border-radius: 10px;
-background-color: #211d24a9;
-border: 4px solid black;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  min-width: 30%;
+  height: 100%;
+  padding: 40px 20px;
+  border-radius: 10px;
+  background-color: #211d24a9;
+  border: 4px solid black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .pdl {
@@ -164,6 +177,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+width: 100%;
 }
 
 .pdl h4 {
@@ -183,6 +197,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+width: 100%;
 }
 
 .wins h4 {
@@ -202,6 +217,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+width: 100%;
 }
 
 .loses h4 {
@@ -254,4 +270,81 @@ background-image: repeating-linear-gradient( 5deg,
   var(--master) 31%);
 color: #1e2127;
 transform: scale(1);
+}
+
+.erro {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+.erro h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 20px 0px;
+}
+
+.erro a {
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #1e212779;
+  transition: 1s;
+  font-weight: bold;
+}
+
+.erro a:hover {
+  background-color: #1e2127;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 300px) and (max-width: 620px) {
+  .panel{
+    height: 100%;
+  }
+   .panel h1 {
+    font-size: 1.5rem;
+   }
+
+   .img-jinx {
+    width: 60%;
+   }
+
+   .form__group {
+    width: 80%;
+   }
+
+   .button {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .button button {
+    background-color: transparent;
+    font-size: 0.9rem;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    margin: 20px 0px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+   }
+
+   .erro {
+    width: 100%;
+    height: 100%;
+   }
 }
