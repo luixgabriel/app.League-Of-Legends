@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "public": true,
   "builds": [
     {
       "src": "app.js",
@@ -8,7 +9,7 @@
   ],
   "routes": [ {
     "src": "/(.*)",
-    "dest": "/"
+    "dest": "app.js"
   }
 ]
 
