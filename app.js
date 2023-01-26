@@ -25,6 +25,6 @@ router.post('/player', HomeController.playerData);
 
 const port = process.env.PORT;
 
-app.listen(port || 4000, () => {
+app.listen(3333, () => {
   console.log('Servidor rodando');
 });
