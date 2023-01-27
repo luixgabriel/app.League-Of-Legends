@@ -1,8 +1,8 @@
-import { Router } from 'express';
-import HomeController from './controllers/HomeController';
+// import { Router } from 'express';
+// import HomeController from './controllers/HomeController';
 
-const router = new Router();
+// const router = new Router();
 
-router.get('/', HomeController.index);
-router.post('/player', HomeController.playerData);
-export default router;
+// router.get('/', HomeController.index);
+// router.post('/player', HomeController.playerData);
+// export default router;
